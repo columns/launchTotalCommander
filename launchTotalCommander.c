@@ -22,12 +22,13 @@
 #define CONF_PATH			"C:\\totalcmd\\configrations\\"
 #define FTP_FILE			CONF_PATH "Wcx_ftp.ini"
 
-char paths[MAX_CONFIG_NUM][MAX_FILENAME_LEN];//paths[0] is used as temp buffer
-
-
 #define ARGS_EXE			0
 #define ARGS_WINCMD			1
 #define ARGS_FTP			2
+
+
+//paths[0] is used as temp buffer
+char paths[MAX_CONFIG_NUM][MAX_FILENAME_LEN];
 
 char args[][MAX_FILENAME_LEN] = 
 {
@@ -104,10 +105,10 @@ int main()
 }
 
 /********************************************************/
-/* @function	cleanUp	*/
-/* @param		confNum: number of configurations. */
-/* @return		*/
-/* @description check if file is now in configure*/
+/* @function	cleanUp					*/
+/* @param	confNum: number of configurations. 	*/
+/* @return						*/
+/* @description check if file is now in configure	*/
 /********************************************************/
 void cleanUp(int confSum)
 {
@@ -153,11 +154,11 @@ void cleanUp(int confSum)
 }
 
 /********************************************************/
-/* @function	isInConf	*/
-/* @param		confNum: number of configurations.
-				fileName:config file name */
-/* @return		*/
-/* @description check if file is now in configure*/
+/* @function	isInConf				*/
+/* @param	confNum: number of configurations.	*/
+/*		fileName:config file name 		*/
+/* @return						*/
+/* @description check if file is now in configure	*/
 /********************************************************/
 int isInConf(int confSum,char* fileName)
 {
@@ -187,10 +188,10 @@ int newConf(char* name)
 }
 
 /********************************************************/
-/* @function	setupExecArgs	*/
-/* @param		*/
-/* @return		*/
-/* @description setup arguments for exec call*/
+/* @function	setupExecArgs				*/
+/* @param						*/
+/* @return						*/
+/* @description setup arguments for exec call		*/
 /********************************************************/
 void setupExecArgs(void)
 {
@@ -214,11 +215,11 @@ void setupExecArgs(void)
 
 
 /********************************************************/
-/* @function	createFileName	*/
-/* @param		*/
-/* @return		*/
+/* @function	createFileName				*/
+/* @param						*/
+/* @return						*/
 /* @description create file name string according 
-				to user choice*/
+				to user choice		*/
 /********************************************************/
 int createFileName(int userChoice)
 {
@@ -234,11 +235,11 @@ int createFileName(int userChoice)
 
 
 /********************************************************/
-/* @function	getUserChoice	*/
-/* @param		*/
-/* @return		configuration index*/
+/* @function	getUserChoice				*/
+/* @param						*/
+/* @return		configuration index		*/
 /* @description get user choice of configuration frmo
-				console	*/
+				console			*/
 /********************************************************/
 int getUserChoice(void)
 {
@@ -251,10 +252,10 @@ int getUserChoice(void)
 }
 
 /********************************************************/
-/* @function	readconfs	*/
-/* @param		*/
-/* @return		number of valid configurations*/
-/* @description read configurations to paths[][] */
+/* @function	readconfs				*/
+/* @param						*/
+/* @return		number of valid configurations	*/
+/* @description read configurations to paths[][] 	*/
 /********************************************************/
 int readconfs(void)
 {
