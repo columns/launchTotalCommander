@@ -8,7 +8,6 @@
 #include <direct.h>
 
 
-
 #define __FTP_FILE__
 
 #define MAX_FILENAME_LEN    256
